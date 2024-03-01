@@ -6,15 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rb;
     private float mSpeed = 5f;
-    private float jSpeed = 20f;
+    [SerializeField] private float jSpeed = 20f;
     [SerializeField] Transform groundCheckPoint;
     [SerializeField] float groundCheckY = 0.2f;
     [SerializeField] float groundCheckX = 0.5f;
     [SerializeField] LayerMask Ground;
     private string HorizontalAxis = "Horizontal";
-
-    private float j2Speed = 10f;
-
+    private bool doubleJump;
+    [SerializeField] private float djSpeed = 10f;
     
     private float hMovement;
 
@@ -31,9 +30,24 @@ public class PlayerMovement : MonoBehaviour
 
         Move();
 
-        Grounded();
+        IsGrounded();
 
-        Jump();
+        if (IsGrounded() && !Input.GetButton("Jump"))
+        {
+            doubleJump = false;
+        }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            if (IsGrounded() || doubleJump)
+            {
+                Debug.Log("Salto");
+
+                _rb.AddForce(new Vector2(0, doubleJump ? djSpeed : jSpeed), ForceMode2D.Impulse);
+
+                doubleJump = !doubleJump;
+            }
+        }
     }
 
     public void GetInput()
@@ -43,10 +57,10 @@ public class PlayerMovement : MonoBehaviour
 
     public void Move()
     {
-        _rb.velocity = new Vector2(mSpeed * hMovement, _rb.position.y);
+        _rb.velocity = new Vector2(mSpeed * hMovement, _rb.velocity.y);
     }
 
-    public bool Grounded()
+    public bool IsGrounded()
     {
         if (Physics2D.Raycast(groundCheckPoint.position, Vector2.down, groundCheckY, Ground)
             || Physics2D.Raycast(groundCheckPoint.position + new Vector3(groundCheckX, 0, 0), Vector2.down, groundCheckY, Ground)
@@ -59,15 +73,6 @@ public class PlayerMovement : MonoBehaviour
             return false;
         }
 
-    }
-
-    public void Jump()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && Grounded())
-        {
-            Debug.Log("salta");
-            _rb.AddForce(new Vector2(_rb.position.y * jSpeed, (float)ForceMode2D.Impulse));
-        }
     }
 
 }

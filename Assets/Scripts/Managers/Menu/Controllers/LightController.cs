@@ -26,8 +26,8 @@ public class LightController : MonoBehaviour
         if (other.CompareTag("Switch"))
         {
             Debug.Log("Switch");
-            _lightbulb.color =  Color.red;
             lightbulbbloom.color = Color.red;
+            lightbulbbloom.intensity = 50f;
         }
     }
 

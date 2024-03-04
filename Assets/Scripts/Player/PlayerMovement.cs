@@ -1,6 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+
+[Serializable]
+public enum Colors
+{
+    white,
+    red,
+    blue,
+    green,
+}
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,14 +25,21 @@ public class PlayerMovement : MonoBehaviour
     private string HorizontalAxis = "Horizontal";
     private bool doubleJump;
     [SerializeField] private float djSpeed = 10f;
-    
+
     private float hMovement;
+
+    [SerializeField] private ColorData colorData;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -48,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
                 doubleJump = !doubleJump;
             }
         }
+
+
     }
 
     public void GetInput()
@@ -74,5 +94,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-
 }
+
+   

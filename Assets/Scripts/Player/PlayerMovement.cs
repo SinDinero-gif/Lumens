@@ -13,6 +13,13 @@ public enum Colors
     green,
 }
 
+[Serializable]
+public enum ObjectInteract
+{
+    Button,
+    Lever,
+}
+
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rb;
@@ -36,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-
+        
     }
 
 
@@ -94,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
+
 }
 
    

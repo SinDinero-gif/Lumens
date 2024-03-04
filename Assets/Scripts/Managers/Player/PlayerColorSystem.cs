@@ -7,7 +7,19 @@ using UnityEngine.Rendering.Universal;
 public class PlayerColorSystem : MonoBehaviour
 {
     private Colors currentColor;
+    private ObjectInteract currentObject;
     [SerializeField] private Light2D _lightPlayer;
+    private Interactable interactObject;
+
+
+    public void Awake()
+    {
+        interactObject = GetComponent<Interactable>();
+    }
+
+    private void Update()
+    {
+    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -15,8 +27,11 @@ public class PlayerColorSystem : MonoBehaviour
         {
             currentColor = component.colorPortal;
             ColorLightSwap();
+            
         }
     }
+
+    
 
     private void ColorLightSwap()
     {

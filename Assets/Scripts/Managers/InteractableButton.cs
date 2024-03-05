@@ -10,11 +10,12 @@ public class InteractableButton : Interactable
     private void Awake()
     {
         _animatior = GetComponent<Animator>();
+        Puerta.SetActive(false);
     }
 
     public override void Interact()
     {
         _animatior.SetTrigger("Active");
-        Puerta.SetActive(false);
+        Puerta.SetActive(true);
     }
 }

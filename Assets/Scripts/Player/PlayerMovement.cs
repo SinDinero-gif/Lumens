@@ -37,12 +37,17 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private ColorData colorData;
 
+    [SerializeField] private SpriteRenderer playerSprite;
+
+    [SerializeField] private Animator playerAnimator;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        
         
     }
 
@@ -60,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
             doubleJump = false;
+            playerAnimator.SetBool("Jump", false);
         }
 
         if (Input.GetButtonDown("Jump"))
@@ -71,10 +77,34 @@ public class PlayerMovement : MonoBehaviour
                 _rb.AddForce(new Vector2(0, doubleJump ? djSpeed : jSpeed), ForceMode2D.Impulse);
 
                 doubleJump = !doubleJump;
+
+                playerAnimator.SetBool("DJump", true);
             }
+
+            playerAnimator.SetBool("Jump", true);
+            playerAnimator.SetBool("Grounded", false);
+
         }
 
+        Flip();
 
+        if (IsGrounded())
+        {
+            playerAnimator.SetBool("Grounded", true);
+        }
+    }
+
+
+    private void Flip()
+    {
+        if(_rb.velocity.x < 0)
+        {
+            playerSprite.flipX = true;
+        }
+        if(_rb.velocity.x > 0)
+        {
+            playerSprite.flipX = false;
+        }
     }
 
     public void GetInput()
@@ -85,6 +115,14 @@ public class PlayerMovement : MonoBehaviour
     public void Move()
     {
         _rb.velocity = new Vector2(mSpeed * hMovement, _rb.velocity.y);
+        if(_rb.velocity.x != 0) 
+        {
+            playerAnimator.SetBool("isWalking", true);
+        }else
+        {
+            playerAnimator.SetBool("isWalking", false);
+        }
+        
     }
 
     public bool IsGrounded()

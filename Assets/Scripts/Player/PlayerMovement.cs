@@ -13,6 +13,13 @@ public enum Colors
     green,
 }
 
+[Serializable]
+public enum ObjectInteract
+{
+    Button,
+    Lever,
+}
+
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rb;
@@ -28,32 +35,37 @@ public class PlayerMovement : MonoBehaviour
 
     private float hMovement;
 
+    [SerializeField] private ColorData colorData;
+
     [SerializeField] private SpriteRenderer playerSprite;
 
     [SerializeField] private Animator playerAnimator;
 
+
+
+    // Start is called before the first frame update
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();        
-    }
+        _rb = GetComponent<Rigidbody2D>();
         
+        
+    }
+
+
+
+    // Update is called once per frame
     void Update()
     {
-        Flip();
-
         GetInput();
 
         Move();
 
         IsGrounded();
 
-
         if (IsGrounded() && !Input.GetButton("Jump"))
         {
             doubleJump = false;
             playerAnimator.SetBool("Jump", false);
-            playerAnimator.SetBool("DJump", false);
-            playerAnimator.SetBool("Grounded", true);
         }
 
         if (Input.GetButtonDown("Jump"))
@@ -66,22 +78,22 @@ public class PlayerMovement : MonoBehaviour
 
                 doubleJump = !doubleJump;
 
-                
+                playerAnimator.SetBool("DJump", true);
             }
 
             playerAnimator.SetBool("Jump", true);
-
             playerAnimator.SetBool("Grounded", false);
 
-            if (!doubleJump)
-            {
-                playerAnimator.SetBool("DJump", true);
-                playerAnimator.SetBool("Grounded", false);
-            }
+        }
 
-        }        
-        
+        Flip();
+
+        if (IsGrounded())
+        {
+            playerAnimator.SetBool("Grounded", true);
+        }
     }
+
 
     private void Flip()
     {

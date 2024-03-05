@@ -10,24 +10,45 @@ public class PlayerColorSystem : MonoBehaviour
     private ObjectInteract currentObject;
     [SerializeField] private Light2D _lightPlayer;
     private Interactable interactObject;
+    [SerializeField] private PlayerMovement playerMovement;
 
+    public bool Interaction => Input.GetKeyDown(KeyCode.E);
 
     public void Awake()
     {
         interactObject = GetComponent<Interactable>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     private void Update()
     {
+        if (Interaction)
+        {
+            interactObject?.Interact();
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.TryGetComponent<Interactable>(out Interactable component))
+        {
+            if (component.colorInteraction == currentColor)
+            {
+                interactObject = component;
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.TryGetComponent<Portal>(out Portal component))
+        if(collision.TryGetComponent<Portal>(out Portal portal))
         {
-            currentColor = component.colorPortal;
+            currentColor = portal.colorPortal;
             ColorLightSwap();
-            
+        }
+        if(collision.TryGetComponent<Interactable>(out Interactable interactable))
+        {
+             interactObject = null;
         }
     }
 
@@ -51,4 +72,6 @@ public class PlayerColorSystem : MonoBehaviour
                 break;
         }
     }
+
+
 }

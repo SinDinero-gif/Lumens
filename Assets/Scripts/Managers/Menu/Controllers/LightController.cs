@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.Serialization;
 
 public class LightController : MonoBehaviour
 {
-    public SpriteRenderer _lightbulb;
-    public Light2D lightbulbbloom;
-
+    public GameObject title;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        title.SetActive(false);
     }
 
     // Update is called once per frame
@@ -26,8 +26,7 @@ public class LightController : MonoBehaviour
         if (other.CompareTag("Switch"))
         {
             Debug.Log("Switch");
-            lightbulbbloom.color = Color.red;
-            lightbulbbloom.intensity = 50f;
+            title.SetActive(true);
         }
     }
 

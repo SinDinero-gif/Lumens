@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
+
 
 [Serializable]
 public enum Colors
@@ -60,8 +58,6 @@ public class PlayerMovement : MonoBehaviour
         {
             if (IsGrounded() || doubleJump)
             {
-                Debug.Log("Salto");
-
                 _rb.AddForce(new Vector2(0, doubleJump ? djSpeed : jSpeed), ForceMode2D.Impulse);
 
                 doubleJump = !doubleJump;

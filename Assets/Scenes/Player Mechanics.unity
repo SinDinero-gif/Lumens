@@ -209,6 +209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4535310496573606325, guid: dfde6649c7c8d9b48b2f6e71255357b1, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6874609843635128277, guid: dfde6649c7c8d9b48b2f6e71255357b1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -404,6 +408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 269638735}
   - component: {fileID: 269638734}
+  - component: {fileID: 269638736}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -478,6 +483,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 112178364}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &269638736
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269638733}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3022318, y: 1.044732}
+  m_EdgeRadius: 0
 --- !u!1 &299759812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2047,6 +2097,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6738508364042492101, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
+      propertyPath: m_Intensity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7781772972900038691, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2131,7 +2185,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3457539689945022626, guid: dfde6649c7c8d9b48b2f6e71255357b1, type: 3}
       propertyPath: colorPortal
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4535310496573606325, guid: dfde6649c7c8d9b48b2f6e71255357b1, type: 3}
       propertyPath: m_Name

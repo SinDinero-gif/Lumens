@@ -1,20 +1,52 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class InteractableLever : Interactable
+namespace Managers
 {
-    private Animator _animator;
-    [SerializeField] GameObject button;
-    
-
-    private void Awake()
+    public class InteractableLever : Interactable
     {
-        _animator = GetComponent<Animator>();
-        button.SetActive(false);
-    }
+        [SerializeField] private Animator animator;
+        [SerializeField] private GameObject lever;
+        [SerializeField] private SpriteRenderer leverHandle;
+        
+        private static readonly int Active = Animator.StringToHash("Active");
 
-    public override void Interact()
-    {
-        _animator.SetTrigger("Active");
-        button.SetActive(true);
+        private void Start()
+        {
+            LeverColorSwap();
+        }
+
+        [ContextMenu("Lever Color Swap")]
+        private void LeverColorSwap()
+        {
+            
+
+            switch (colorInteraction)
+            {
+                case Colors.white:
+                    leverHandle.color = Color.white;
+                    break;
+                case Colors.red:
+                    leverHandle.color = Color.red;
+                    break;
+                case Colors.blue:
+                    leverHandle.color = Color.blue;
+                    break;
+                case Colors.green:
+                    leverHandle.color = Color.green;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            
+        }
+
+        public override void Interact()
+        {
+            animator.SetTrigger(Active);
+            lever.SetActive(true);
+        }
     }
 }
+

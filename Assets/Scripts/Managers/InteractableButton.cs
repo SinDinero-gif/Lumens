@@ -7,12 +7,13 @@ namespace Managers
     {
         private Animator _animator;
         private SpriteRenderer _buttonSprite;
+        private AudioSource buttonSoundEffect;
         public bool _activated = false;
         
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-
+            buttonSoundEffect = GetComponent<AudioSource>();
         }
 
         private void Start()
@@ -46,6 +47,7 @@ namespace Managers
 
         public override void Interact()
         {
+            buttonSoundEffect.Play();
             _animator.SetTrigger("Active");
             _activated = true;
         }

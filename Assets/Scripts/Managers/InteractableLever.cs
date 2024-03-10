@@ -7,8 +7,9 @@ namespace Managers
     public class InteractableLever : Interactable
     {
         [SerializeField] private Animator animator;
-        [SerializeField] private GameObject lever;
         [SerializeField] private SpriteRenderer leverHandle;
+        [SerializeField] private AudioSource leverSoundEffect;
+        public bool _activated = false;
         
         private static readonly int Active = Animator.StringToHash("Active");
 
@@ -44,8 +45,10 @@ namespace Managers
 
         public override void Interact()
         {
+            leverSoundEffect.Play();
             animator.SetTrigger(Active);
-            lever.SetActive(true);
+            _activated = true;
+            
         }
     }
 }

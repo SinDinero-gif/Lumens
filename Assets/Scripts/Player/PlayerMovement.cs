@@ -28,11 +28,14 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private SpriteRenderer playerSprite;
 
-    [SerializeField] private Animator playerAnimator;
+    private Animator playerAnimator;
+
+    [SerializeField] private AudioSource jumpSoundEffect;
 
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();        
+        _rb = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
     }
         
     void Update()
@@ -61,10 +64,10 @@ public class PlayerMovement : MonoBehaviour
                 _rb.AddForce(new Vector2(0, doubleJump ? djSpeed : jSpeed), ForceMode2D.Impulse);
 
                 doubleJump = !doubleJump;
-
+                jumpSoundEffect.Play();
                 
             }
-
+            jumpSoundEffect.Play();
             playerAnimator.SetBool("Jump", true);
 
             playerAnimator.SetBool("Grounded", false);

@@ -10,7 +10,7 @@ namespace Managers
         private GameObject door;
         [SerializeField]private Animator doorAnim;
         [SerializeField] private InteractableButton _interactableButton;
-
+        [SerializeField] private AudioSource _doorSoundEffect;
         private void Update()
         {
             if (_interactableButton._activated)
@@ -21,7 +21,8 @@ namespace Managers
 
         public void Activate()
         {
-           doorAnim.SetTrigger("Activate");
+            _doorSoundEffect.Play();
+            doorAnim.SetTrigger("Activate");
         }
     }
 }

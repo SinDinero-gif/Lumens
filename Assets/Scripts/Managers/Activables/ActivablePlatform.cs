@@ -1,6 +1,7 @@
+using Managers.Interactuables;
 using UnityEngine;
 
-namespace Managers
+namespace Managers.Activables
 {
     public class ActivablePlatform : MonoBehaviour, IActivation
 
@@ -8,14 +9,6 @@ namespace Managers
         private GameObject _platform;
         [SerializeField] private Animator _platformAnim;
         [SerializeField] private InteractableLever _interactableLever;
-        
-        private void Update()
-        {
-            if (_interactableLever._activated)
-            {
-                Activate();   
-            }
-        }
 
         public void Activate()
         {

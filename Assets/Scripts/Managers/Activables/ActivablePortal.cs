@@ -1,7 +1,8 @@
 using System;
+using Managers.Interactuables;
 using UnityEngine;
 
-namespace Managers
+namespace Managers.Activables
 {
     public class ActivablePortal : MonoBehaviour, IActivation
 
@@ -12,14 +13,6 @@ namespace Managers
         public void Awake()
         {
             Portal.SetActive(false);
-        }
-
-        private void Update()
-        {
-            if (_interactableButton._activated)
-            {
-                Activate();   
-            }
         }
 
         public void Activate()

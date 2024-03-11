@@ -13,9 +13,14 @@ public enum ObjectInteract
     Lever,
 }
 
-
+namespace Managers.Interactuables
+{
+    
+}
 public abstract class Interactable : MonoBehaviour
 {
     public Colors colorInteraction;
+    protected bool _activated = false;
+    [SerializeField] protected GameObject _activable;
     public abstract void Interact();
 }

@@ -1,30 +1,37 @@
 using System;
+using Managers.Activables;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace Managers
+
+namespace Managers.Interactuables
 {
     public class InteractableLever : Interactable
     {
         [SerializeField] private Animator animator;
         [SerializeField] private SpriteRenderer leverHandle;
-        [SerializeField] private AudioSource leverSoundEffect;
-        public bool _activated = false;
+        private AudioSource _leverSoundEffect;
         
         private static readonly int Active = Animator.StringToHash("Active");
+
+        private void Awake()
+        {
+            _leverSoundEffect = GetComponent<AudioSource>();
+        }
 
         private void Start()
         {
             LeverColorSwap();
+            
         }
 
         [ContextMenu("Lever Color Swap")]
         private void LeverColorSwap()
         {
-            
 
             switch (colorInteraction)
             {
+                
+                
                 case Colors.white:
                     leverHandle.color = Color.white;
                     break;
@@ -45,9 +52,15 @@ namespace Managers
 
         public override void Interact()
         {
-            leverSoundEffect.Play();
-            animator.SetTrigger(Active);
-            _activated = true;
+            if(!_activated)
+            {
+                _leverSoundEffect.Play();
+                animator.SetTrigger(Active);
+                _activable.TryGetComponent(out IActivation component);
+                component?.Activate();
+                _activated = true;    
+            }
+            
             
         }
     }

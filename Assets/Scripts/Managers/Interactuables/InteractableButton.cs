@@ -1,14 +1,14 @@
 using System;
+using Managers.Activables;
 using UnityEngine;
 
-namespace Managers
+namespace Managers.Interactuables
 {
     public class InteractableButton : Interactable
     {
         private Animator _animator;
         private SpriteRenderer _buttonSprite;
         private AudioSource buttonSoundEffect;
-        public bool _activated = false;
         
         private void Awake()
         {
@@ -47,9 +47,14 @@ namespace Managers
 
         public override void Interact()
         {
-            buttonSoundEffect.Play();
-            _animator.SetTrigger("Active");
-            _activated = true;
+            if (!_activated)
+            {
+                buttonSoundEffect.Play();
+                _animator.SetTrigger("Active");
+                _activable.TryGetComponent(out IActivation component);
+                component?.Activate();
+                _activated = true;
+            }
         }
     }    
 }

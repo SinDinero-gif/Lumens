@@ -928,7 +928,7 @@ AudioSource:
   m_GameObject: {fileID: 2055887652}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 311684681179309630, guid: 012aa5eadeb44734e915c1f2230da8e9, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.4
@@ -1562,6 +1562,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 433305345}
     m_Modifications:
+    - target: {fileID: 1370758598626229765, guid: 5e3cfcc4d3e4d0149a424d4b5b618896, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 311684681179309630, guid: 012aa5eadeb44734e915c1f2230da8e9, type: 2}
     - target: {fileID: 1700118492188364600, guid: 5e3cfcc4d3e4d0149a424d4b5b618896, type: 3}
       propertyPath: _activable
       value: 
@@ -1723,7 +1727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 983472601303458456, guid: c40faf2ca949c2842ae75f1669ea05bc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.85
+      value: 4.9
       objectReference: {fileID: 0}
     - target: {fileID: 983472601303458456, guid: c40faf2ca949c2842ae75f1669ea05bc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1761,6 +1765,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorMaster
       objectReference: {fileID: 0}
+    - target: {fileID: 2122060485922699265, guid: c40faf2ca949c2842ae75f1669ea05bc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2190336784936649605, guid: c40faf2ca949c2842ae75f1669ea05bc, type: 3}
       propertyPath: doorSFx
       value: 
@@ -1769,6 +1777,14 @@ PrefabInstance:
       propertyPath: _interactableButton
       value: 
       objectReference: {fileID: 5911735502140476291}
+    - target: {fileID: 5843469482009715822, guid: c40faf2ca949c2842ae75f1669ea05bc, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9084691508599997286, guid: c40faf2ca949c2842ae75f1669ea05bc, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1992,8 +2008,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.7746501, y: 0.00090003014, z: 0}
-    m_Extent: {x: 3.87115, y: 3.9052, z: 0}
+    m_Center: {x: 0.7672, y: 0.001850009, z: 0}
+    m_Extent: {x: 3.8767, y: 3.9050498, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2188,8 +2204,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.7719501, y: 0.000100016594, z: 0}
-    m_Extent: {x: 3.87915, y: 3.9034, z: 0}
+    m_Center: {x: 0.7731, y: 0.00024998188, z: 0}
+    m_Extent: {x: 3.8712, y: 3.90245, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2897,10 +2913,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 194837261080406050, guid: a483b851610583a46837c304142f41bc, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 23c63fb1b31bdba40898588c042ec1b1, type: 3}
     - target: {fileID: 2837944611788232559, guid: a483b851610583a46837c304142f41bc, type: 3}
       propertyPath: m_Name
       value: BG Music

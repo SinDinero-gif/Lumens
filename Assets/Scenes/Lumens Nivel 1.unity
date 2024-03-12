@@ -1080,6 +1080,10 @@ PrefabInstance:
       propertyPath: _activable
       value: 
       objectReference: {fileID: 804879735}
+    - target: {fileID: 1700118492188364600, guid: 5e3cfcc4d3e4d0149a424d4b5b618896, type: 3}
+      propertyPath: colorInteraction
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1767219831523700420, guid: 5e3cfcc4d3e4d0149a424d4b5b618896, type: 3}
       propertyPath: m_Name
       value: Elevator

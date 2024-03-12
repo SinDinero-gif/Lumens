@@ -127,6 +127,23 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("MovingPlatform"))
+        {
+            transform.parent = other.transform;
+            _rb.gravityScale = 10;
+        }
+    }
+
+    public void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("MovingPlatform"))
+        {
+            transform.parent = null;
+            _rb.gravityScale = 2.8f;
+        }
+    }
 }
 
    

@@ -6,6 +6,7 @@ public class LightController : MonoBehaviour
 {
     public GameObject title;
     public GameObject buttons;
+    public GameObject music;
     private bool _switch = false;
     
     // Start is called before the first frame update
@@ -13,6 +14,7 @@ public class LightController : MonoBehaviour
     {
         title.SetActive(false);
         buttons.SetActive(false);
+        music.SetActive(false);
     }
 
     // Update is called once per frame
@@ -29,6 +31,7 @@ public class LightController : MonoBehaviour
         _switch = true;
         yield return new WaitForSeconds(0.8f);
         buttons.SetActive(true);
+        music.SetActive(true);
     }
 
     public void OnTriggerEnter2D(Collider2D other)

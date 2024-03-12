@@ -101,8 +101,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 59.844795
   m_PointLightOuterAngle: 269.8444
-  m_PointLightInnerRadius: 0.82
-  m_PointLightOuterRadius: 1.73
+  m_PointLightInnerRadius: 0.36
+  m_PointLightOuterRadius: 0.84
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 6899613040722526237}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.43, y: -3.729, z: 0}
-  m_LocalScale: {x: 1.4013, y: 1.4013, z: 1.4013}
+  m_LocalScale: {x: 0.720072, y: 0.720072, z: 0.720072}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6589100026793126843}
@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f4c5d75b8ca5a498e1583094ff3d32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mSpeed: 5
   jSpeed: 8
   groundCheckPoint: {fileID: 6589100026793126843}
   groundCheckY: 0.2

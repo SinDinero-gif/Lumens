@@ -14,7 +14,7 @@ public enum Colors
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D _rb;
-    private float mSpeed = 5f;
+    [SerializeField] private float mSpeed = 5f;
     [SerializeField] private float jSpeed = 20f;
     [SerializeField] Transform groundCheckPoint;
     [SerializeField] float groundCheckY = 0.2f;

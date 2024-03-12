@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -8,6 +9,12 @@ namespace Managers.Activables
     {
         private Animator transitionCanvas;
         private float transitionTime = 3.5f;
+
+        private void Start()
+        {
+            transitionCanvas = GetComponent<Animator>();
+        }
+    
         
         public void Activate()
         {
@@ -16,7 +23,7 @@ namespace Managers.Activables
 
         private IEnumerator TransitionLevel(int levelIndex)
         {
-            transitionCanvas.SetTrigger("Transition");
+            transitionCanvas?.SetTrigger("Transition");
 
             yield return new WaitForSeconds(transitionTime);
 

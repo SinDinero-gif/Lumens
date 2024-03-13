@@ -49,7 +49,7 @@ namespace Menu
         public void SetMasterVolume()
         {
             float volumeMaster = masterSlider.value;
-            mixerSettings.SetFloat("masterLumens", Mathf.Log10(volumeMaster) * 20);
+            mixerSettings.SetFloat("MasterLumens", Mathf.Log10(volumeMaster) * 20);
             PlayerPrefs.SetFloat("masterVolume" , volumeMaster);
         }
 

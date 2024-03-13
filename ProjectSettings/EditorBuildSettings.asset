@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Lumens Nivel 3.unity
     guid: 7bec4043fddab8a419e3129fe85c907e
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 0e7b7adab14c0a349be4b154394fe281
   m_configObjects: {}

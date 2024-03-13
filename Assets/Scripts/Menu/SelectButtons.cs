@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Managers.Activables;
@@ -10,12 +11,17 @@ namespace Menu
     {
         [SerializeField] private GameObject settingsWindow;
         [SerializeField] private Animator settingsAnimator;
+        
+
+        private bool isOpen;
+        private bool canActivate;
 
         private void Awake()
         {
-            settingsWindow.SetActive(false);
+            canActivate = true;
+            isOpen = false;
         }
-        
+
         public void PlayButton(int i = 1)
         {
             SceneManager.LoadScene(i);
@@ -23,9 +29,18 @@ namespace Menu
 
         public void SettingsButton()
         {
-            settingsWindow.SetActive(true);
+            isOpen = !isOpen;
+            if (canActivate)
+            {
+                StartCoroutine((SettingsFunction()));
+            }
         }
-
+        
+        public void MainMenuButton(int i = 0)
+        {
+            SceneManager.LoadScene(i);
+        }
+        
         public void QuitButton()
         {
             Debug.Log("Saliste de la aplicacion");
@@ -34,17 +49,22 @@ namespace Menu
 
         public void GoBackButton()
         {
-            StartCoroutine(GoBackFunction());
+            isOpen = !isOpen;
         }
 
-        private IEnumerator GoBackFunction()
+        private IEnumerator SettingsFunction()
         {
-            float seconds = 1.5f;
+            canActivate = false;
+            
             settingsAnimator.SetTrigger("Active");
             
-            yield return new WaitForSeconds(seconds);
+            yield return new WaitWhile(() => isOpen);
             
-            settingsWindow.SetActive(false);
+            settingsAnimator.SetBool("Active", false);
+
+            yield return new WaitForSeconds(1.6f);
+            
+            canActivate = true;
         }
         
     }

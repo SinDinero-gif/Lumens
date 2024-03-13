@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
+
+
 public class PlayerColorSystem : MonoBehaviour
 {
-    private Colors currentColor;
+    [SerializeField] private Colors currentColor;
     private ObjectInteract currentObject;
     [SerializeField] private Light2D _lightPlayer;
     private Interactable interactObject;
@@ -50,7 +53,7 @@ public class PlayerColorSystem : MonoBehaviour
     }
 
     
-
+    [ContextMenu("Color Light Swap")]
     private void ColorLightSwap()
     {
         switch(currentColor)

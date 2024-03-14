@@ -597,7 +597,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 98.36301, y: 0, z: -27.084206, w: -24.61514}
+  m_margin: {x: 98.36301, y: 0, z: -41.877754, w: -24.61514}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2341,8 +2341,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.77614987, y: -0.0048000813, z: 0}
-    m_Extent: {x: 3.87225, y: 3.9003, z: 0}
+    m_Center: {x: 0.76715004, y: 0.00059998035, z: 0}
+    m_Extent: {x: 3.8782501, y: 3.8990998, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2548,8 +2548,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.7716001, y: 0.0065499544, z: 0}
-    m_Extent: {x: 3.8795, y: 3.9008498, z: 0}
+    m_Center: {x: 0.7688501, y: -0.0014500618, z: 0}
+    m_Extent: {x: 3.86855, y: 3.90395, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

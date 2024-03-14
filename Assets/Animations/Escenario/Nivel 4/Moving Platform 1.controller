@@ -9,7 +9,7 @@ AnimatorController:
   m_Name: Moving Platform 1
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: Active
+  - m_Name: Activate
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -88,7 +88,10 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Activate
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3813437016602560692}
   m_Solo: 0
@@ -98,7 +101,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -114,7 +117,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 3743171547658300114}
-    m_Position: {x: 290, y: 90, z: 0}
+    m_Position: {x: 330, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 3813437016602560692}
     m_Position: {x: 490, y: 10, z: 0}

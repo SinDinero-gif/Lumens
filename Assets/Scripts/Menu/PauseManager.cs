@@ -43,6 +43,12 @@ namespace Menu
             SceneManager.LoadScene(i);
         }
 
+        public void RestartButton()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            Debug.Log("Reinicia el nivel");
+        }
+
         private IEnumerator PauseFunction()
         {
             canPause = false;

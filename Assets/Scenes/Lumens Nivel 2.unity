@@ -128,6 +128,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7231370584102671633, guid: 5e3cfcc4d3e4d0149a424d4b5b618896, type: 3}
   m_PrefabInstance: {fileID: 2689521239401618645}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &273734444 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5384359437350633810, guid: a0354619eb5263e4183ef62bd17cec17, type: 3}
+  m_PrefabInstance: {fileID: 7750807834442828636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3130235d8a3542a69471dfd323682562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &299759812
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +869,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 108831519259868615, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 273734444}
+    - target: {fileID: 108831519259868615, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartButton
+      objectReference: {fileID: 0}
     - target: {fileID: 3067942166138286055, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17.3
@@ -897,6 +916,14 @@ PrefabInstance:
     - target: {fileID: 3067942166138286055, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542181657557314431, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 273734444}
+    - target: {fileID: 4542181657557314431, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MainMenuButton
       objectReference: {fileID: 0}
     - target: {fileID: 4959969080232124089, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
       propertyPath: m_Name
@@ -2173,8 +2200,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.7693999, y: 0.0054500103, z: 0}
-    m_Extent: {x: 3.8783, y: 3.90285, z: 0}
+    m_Center: {x: 0.7680501, y: 0.0011000633, z: 0}
+    m_Extent: {x: 3.86615, y: 3.9073, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2319,11 +2346,11 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1315977965182696257, guid: 27b1d382241250c4195dbcb805c3375e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1753160157}
-    - targetCorrespondingSourceObject: {fileID: 1315977965182696257, guid: 27b1d382241250c4195dbcb805c3375e, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 526182088}
+    - targetCorrespondingSourceObject: {fileID: 1315977965182696257, guid: 27b1d382241250c4195dbcb805c3375e, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 1753160157}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27b1d382241250c4195dbcb805c3375e, type: 3}
 --- !u!224 &4792336098404312218 stripped
@@ -2380,8 +2407,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.7691499, y: 0.0024000406, z: 0}
-    m_Extent: {x: 3.88065, y: 3.902, z: 0}
+    m_Center: {x: 0.76584995, y: 0.00059998035, z: 0}
+    m_Extent: {x: 3.8678498, y: 3.9034, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEditor;
 using System;
 
-namespace Bundos.MovingPlatforms
+namespace Code
 {
     [CustomEditor(typeof(PlatformController))]
     public class PlatformControllerEditor : Editor

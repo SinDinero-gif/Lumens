@@ -860,7 +860,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3067942166138286055, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -17.3
       objectReference: {fileID: 0}
     - target: {fileID: 3067942166138286055, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -904,7 +904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4959969080232124089, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5938805814822429006, guid: e25f2229a033dd2488a9a48ceb0a2ef6, type: 3}
       propertyPath: m_Size.x
@@ -2173,8 +2173,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.76985013, y: -0.0017499924, z: 0}
-    m_Extent: {x: 3.87915, y: 3.90185, z: 0}
+    m_Center: {x: 0.7693999, y: 0.0054500103, z: 0}
+    m_Extent: {x: 3.8783, y: 3.90285, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2380,8 +2380,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.76610005, y: 0.006450057, z: 0}
-    m_Extent: {x: 3.8663, y: 3.90315, z: 0}
+    m_Center: {x: 0.7691499, y: 0.0024000406, z: 0}
+    m_Extent: {x: 3.88065, y: 3.902, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2463,6 +2463,14 @@ PrefabInstance:
     - target: {fileID: 438026425417850038, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738508364042492101, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
+      propertyPath: m_PointLightInnerRadius
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738508364042492101, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 7781772972900038691, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
       propertyPath: m_Name

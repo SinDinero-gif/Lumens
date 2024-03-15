@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Bundos.MovingPlatforms
+namespace Code
 {
     public enum WaypointPathType
     {
@@ -138,7 +138,8 @@ namespace Bundos.MovingPlatforms
 
         private bool IsSelected()
         {
-            return UnityEditor.Selection.activeGameObject == transform.gameObject;
+            return true;
+            //return UnityEditor.Selection.activeGameObject == transform.gameObject;
         }
 
         int mod(int x, int m)

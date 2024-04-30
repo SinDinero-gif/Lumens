@@ -3826,6 +3826,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2358307447703166873, guid: 7a0cd4bacf1930342aae3dfb312a7ff8, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9372549
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358307447703166873, guid: 7a0cd4bacf1930342aae3dfb312a7ff8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358307447703166873, guid: 7a0cd4bacf1930342aae3dfb312a7ff8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.4027694
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358307447703166873, guid: 7a0cd4bacf1930342aae3dfb312a7ff8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.25943398
+      objectReference: {fileID: 0}
     - target: {fileID: 4584091246279855617, guid: 7a0cd4bacf1930342aae3dfb312a7ff8, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3861,6 +3877,10 @@ PrefabInstance:
     - target: {fileID: 5433192721423714887, guid: 7a0cd4bacf1930342aae3dfb312a7ff8, type: 3}
       propertyPath: m_Name
       value: SettingsWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 5433192721423714887, guid: 7a0cd4bacf1930342aae3dfb312a7ff8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6721106033193146409, guid: 7a0cd4bacf1930342aae3dfb312a7ff8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

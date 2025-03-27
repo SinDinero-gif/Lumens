@@ -1,77 +1,76 @@
-using System;
+using Systems.Player;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
 
-
-
-public class PlayerColorSystem : MonoBehaviour
+namespace Systems.Managers.Player
 {
-    [SerializeField] private Colors currentColor;
-    private ObjectInteract currentObject;
-    [SerializeField] private Light2D _lightPlayer;
-    private Interactable interactObject;
-    [SerializeField] private PlayerMovement playerMovement;
-
-    public bool Interaction => Input.GetKeyDown(KeyCode.E);
-
-    public void Awake()
+    public class PlayerColorSystem : MonoBehaviour
     {
-        interactObject = GetComponent<Interactable>();
-        playerMovement = GetComponent<PlayerMovement>();
-    }
+        [SerializeField] private Colors currentColor;
+        private ObjectInteract currentObject;
+        private Interactable interactObject;
+        [SerializeField] private PlayerMovement playerMovement;
 
-    private void Update()
-    {
-        if (Interaction)
+        public bool Interaction => Input.GetKeyDown(KeyCode.E);
+
+        public void Awake()
         {
-            interactObject?.Interact();
+            interactObject = GetComponent<Interactable>();
+            playerMovement = GetComponent<PlayerMovement>();
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.TryGetComponent<Interactable>(out Interactable component))
+        private void Update()
         {
-            if (component.colorInteraction == currentColor)
+            if (Interaction)
             {
-                interactObject = component;
+                interactObject?.Interact();
             }
         }
-    }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if(collision.TryGetComponent<Portal>(out Portal portal))
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            currentColor = portal.colorPortal;
-            ColorLightSwap();
+            if (collision.gameObject.TryGetComponent<Interactable>(out Interactable component))
+            {
+                if (component.colorInteraction == currentColor)
+                {
+                    interactObject = component;
+                }
+            }
         }
-        if(collision.TryGetComponent<Interactable>(out Interactable interactable))
+
+        private void OnTriggerExit2D(Collider2D collision)
         {
-             interactObject = null;
+            if(collision.TryGetComponent<Portal>(out Portal portal))
+            {
+                currentColor = portal.colorPortal;
+                ColorLightSwap();
+            }
+            if(collision.TryGetComponent<Interactable>(out Interactable interactable))
+            {
+                interactObject = null;
+            }
         }
-    }
 
     
-    [ContextMenu("Color Light Swap")]
-    private void ColorLightSwap()
-    {
-        switch(currentColor)
+        [ContextMenu("Color Light Swap")]
+        private void ColorLightSwap()
         {
-            case Colors.red:
-                _lightPlayer.color = Color.red;
-                break;
-            case Colors.green:
-                _lightPlayer.color = Color.green;
-                break;
-            case Colors.blue:
-                _lightPlayer.color = Color.blue;
-                break;
-            case Colors.white:
-                _lightPlayer.color = Color.white;
-                break;
+            switch(currentColor)
+            {
+                case Colors.red:
+                    playerMovement.playerSprite.color = Color.red;
+                    break;
+                case Colors.green:
+                    playerMovement.playerSprite.color = Color.green;
+                    break;
+                case Colors.blue:
+                    playerMovement.playerSprite.color = Color.blue;
+                    break;
+                case Colors.white:
+                    playerMovement.playerSprite.color = Color.white;
+                    break;
+            }
         }
+
+
     }
-
-
 }

@@ -2200,8 +2200,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.7680501, y: 0.0011000633, z: 0}
-    m_Extent: {x: 3.86615, y: 3.9073, z: 0}
+    m_Center: {x: 0.77250016, y: 0.003700018, z: 0}
+    m_Extent: {x: 3.8762002, y: 3.9024, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2407,8 +2407,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: 0.76584995, y: 0.00059998035, z: 0}
-    m_Extent: {x: 3.8678498, y: 3.9034, z: 0}
+    m_Center: {x: 0.7671499, y: 0.0016499758, z: 0}
+    m_Extent: {x: 3.87635, y: 3.90875, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -2452,12 +2452,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 438026425417850038, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7370323
+      objectReference: {fileID: 0}
+    - target: {fileID: 438026425417850038, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7370323
+      objectReference: {fileID: 0}
+    - target: {fileID: 438026425417850038, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.7370323
+      objectReference: {fileID: 0}
+    - target: {fileID: 438026425417850038, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.43
+      value: -7.451
       objectReference: {fileID: 0}
     - target: {fileID: 438026425417850038, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.729
+      value: -3.559
       objectReference: {fileID: 0}
     - target: {fileID: 438026425417850038, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2490,6 +2502,18 @@ PrefabInstance:
     - target: {fileID: 438026425417850038, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062946328472381267, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
+      propertyPath: jSpeed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062946328472381267, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
+      propertyPath: mSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3062946328472381267, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
+      propertyPath: djSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6738508364042492101, guid: cfa3fdb22e4e3dc43b6410e81238ebbe, type: 3}
       propertyPath: m_PointLightInnerRadius

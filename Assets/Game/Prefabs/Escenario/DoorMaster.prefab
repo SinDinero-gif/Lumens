@@ -81,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1882154885841040638
@@ -131,7 +131,7 @@ Animator:
   m_GameObject: {fileID: 1882154885841040638}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 77f6d20deb435954aa9628be5567ec8d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6d33944eade2c08428f1aad336a8b849, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorAnim: {fileID: 3132326609975698977}
-  _interactableButton: {fileID: 0}
+  doorSFx: {fileID: 8300000, guid: 503aadfcc7f11d943b87bf3d36ff902a, type: 3}
 --- !u!61 &2133655642007438076
 BoxCollider2D:
   m_ObjectHideFlags: 0

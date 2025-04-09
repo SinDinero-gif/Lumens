@@ -136,6 +136,16 @@ namespace Code
             }
         }
 
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            collision.transform.SetParent(transform);
+        }
+        
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            collision.transform.SetParent(null);
+        }
+
         private bool IsSelected()
         {
             return true;

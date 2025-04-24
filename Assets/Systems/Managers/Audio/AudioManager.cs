@@ -8,7 +8,9 @@ namespace Systems.Managers.Audio
     public class AudioManager : MonoBehaviour
     {
         public static AudioManager Instance { get; private set; }
-        
+
+        [SerializeField] private AudioMixer audioMixer;
+
         [SerializeField] private AudioSource musicSource;
         [SerializeField] private AudioSource sfxSource;
         
@@ -69,6 +71,21 @@ namespace Systems.Managers.Audio
             {
                 Debug.LogWarning($"SFX Clip {clipName} not found");
             }
+        }
+
+        public void SetMasterVolume(float value)
+        {
+            audioMixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20);
+        }
+
+        public void SetMusicVolume(float value)
+        {
+            audioMixer.SetFloat("MusicVolume", Mathf.Log10(value) * 20);
+        }
+
+        public void SetSfxVolume(float value)
+        {
+            audioMixer.SetFloat("SfxVolume", Mathf.Log10(value) * 20);
         }
 
         public void StopMusic()

@@ -52,9 +52,9 @@ AudioMixerController:
   - guid: 6bbd8b84ed4236b4ca36c2ecb4acd22f
     name: MasterLumens
   - guid: 18315d9963875074c96b3c22ab32b4a0
-    name: musicLumens
+    name: MusicLumens
   - guid: 228cc60bd45653144ab9cbecc88ba5d3
-    name: sfxLumens
+    name: SfxLumens
   m_AudioMixerGroupViews:
   - guids:
     - a28bf6f207eb8df478097c0fec866bbd
